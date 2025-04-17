@@ -1,0 +1,107 @@
+:root {
+    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Raleway", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+  }
+  
+  :root {
+    --background-color: #ffffff;
+    --default-color: #444444;
+    --heading-color: #555555;
+    --accent-color: #3fbbc0;
+    --surface-color: #ffffff;
+    --contrast-color: #ffffff;
+  }
+  
+  body {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 100vw;
+    padding: 40px 5%;
+  }
+  
+  .tabs {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .tabs .nav-tabs {
+    border: 0;
+  }
+  
+  .tabs .nav-link {
+    border: 0;
+    padding: 15px 20px;
+    transition: 0.3s;
+    color: var(--default-color);
+    border-radius: 0;
+    border-right: 2px solid
+      color-mix(in srgb, var(--default-color), transparent 90%);
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  .tabs .nav-link:hover {
+    color: var(--accent-color);
+  }
+  
+  .tabs .nav-link.active {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-color: var(--background-color);
+  }
+  
+  .tabs .tab-pane.active {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .tabs .details {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .tabs .details h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+  }
+  
+  .tabs .details p {
+    font-size: 18px;
+    color: var(--default-color);
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .tabs .details p.fst-italic {
+    font-size: 20px;
+    font-style: italic;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+  }
+  
+  .tabs .details p:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 992px) {
+    .tabs .nav-link {
+      border: 0;
+      padding: 12px;
+    }
+  
+    .tabs .nav-link.active {
+      color: var(--accent-color);
+      background: var(--accent-color);
+    }
+  }
